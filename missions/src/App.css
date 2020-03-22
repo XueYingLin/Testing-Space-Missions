@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.mission-list {
+  margin-top: 32px;
+}
+
+.mission {
+  padding: 12px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+button {
+  padding: 6pa 12px;
+  font-size: 1.5rem;
+  background: none;
+  border: 1px solid white;
+  border-radius: 6px;
+  color: white;
+}
+
+button:hover {
+  background-color: white;
+  color: rgb(0, 0, 58);
+  cursor: point;
+}
