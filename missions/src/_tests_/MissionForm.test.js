@@ -30,3 +30,4 @@ test("Component transition to loading state appears when isFetchingData is true"
 });
 
 //TODO: add a test tp atest tje transition from the loading state back to the resting state
+//TODO: look through this test file anbd list out all the functions come from

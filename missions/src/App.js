@@ -5,22 +5,22 @@ import MissionForm from './components/MissionForm';
 import MissionList from './components/MissionList';
 
 export default function App() {
-  const [isFetchingData, setISFetchingData] = useState(false);
+  const [isFetchingData, setIsFetchingData] = useState(false);
   const [error, setError] = useState("");
   const [misssions, setMissions] = useState([]);
 
   const getData = () => {
-    setISFetchingData(true);
+    setIsFetchingData(true);
     axios
     .get("https://api.spacexdata.com/v3/missions")
     .then(res => {
       console.log(res);
-      setISFetchingData(false);
+      setIsFetchingData(false);
       setMissions(res.data);
     })
     .catch(err => {
       console.error("error fetching data from api, err: ", err.message);
-      setISFetchingData(false);
+      setIsFetchingData(false);
       setError(err.message);
     });
   };
