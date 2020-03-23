@@ -11,10 +11,10 @@ const MissionForm = props => {
             {props.isFetchingData ? (
                 <div>we are fetching data</div>
             ) : (
-                <button onClick={handleGetData}>get Data</button>
+                <button onClick={ handleGetData }>get Data</button>
             )}
         </>
-    )
-}
+    );
+};
 
 export default MissionForm;

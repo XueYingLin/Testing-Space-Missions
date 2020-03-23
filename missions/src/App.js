@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
 import MissionForm from './components/MissionForm';
-import MissionList from './components/MissionList';
+import MissionsList from './components/MissionsList';
 
 export default function App() {
   const [isFetchingData, setIsFetchingData] = useState(false);
   const [error, setError] = useState("");
-  const [misssions, setMissions] = useState([]);
+  const [missions, setMissions] = useState([]);
 
   const getData = () => {
     setIsFetchingData(true);
@@ -27,9 +27,8 @@ export default function App() {
   return (
     <div className="App">
       <h1>Space Missions</h1>
-      <MissionForm getData={getData} isFetchingData={isFetchingdata} />
-      <MissionList error={error} missions={missions} />
-      
+      <MissionForm getData={getData} isFetchingData={isFetchingData} />
+      <MissionsList error={error} missions={missions} />
     </div>
   );
 }

@@ -51,7 +51,7 @@ button {
   padding: 6pa 12px;
   font-size: 1.5rem;
   background: none;
-  border: 1px solid white;
+  border: 1px solid gray;
   border-radius: 6px;
   color: white;
 }
