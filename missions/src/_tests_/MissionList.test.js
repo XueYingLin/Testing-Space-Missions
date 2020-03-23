@@ -1,5 +1,5 @@
 import React from 'reat';
-import { render } from '@testing-library/react';
+import { render, fireEvent, wait } from '@testing-library/react';
 import MissionList from './MissionList';
 
 //TOTO: test the mounting state for the component
@@ -19,4 +19,4 @@ Test("Missions list shows data when rendered tith new missions data", () => {
     //TODO: test that the error message is not rendered 
 
 });
-//TODO: Test tje error state
+//TODO: Test the error state

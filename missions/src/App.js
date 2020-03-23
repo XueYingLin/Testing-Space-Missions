@@ -8,21 +8,31 @@ export default function App() {
   const [isFetchingData, setIsFetchingData] = useState(false);
   const [error, setError] = useState("");
   const [missions, setMissions] = useState([]);
+  import { fetchMissions } from './api/fetchMissions';
 
   const getData = () => {
     setIsFetchingData(true);
-    axios
-    .get("https://api.spacexdata.com/v3/missions")
-    .then(res => {
-      console.log(res);
-      setIsFetchingData(false);
-      setMissions(res.data);
-    })
-    .catch(err => {
-      console.error("error fetching data from api, err: ", err.message);
-      setIsFetchingData(false);
-      setError(err.message);
-    });
+    // axios
+    // .get("https://api.spacexdata.com/v3/missions")
+    // .then(res => {
+    //   console.log(res);
+    //   setIsFetchingData(false);
+    //   setMissions(res.data);
+    // })
+    // .catch(err => {
+    //   console.error("error fetching data from api, err: ", err.message);
+    //   setIsFetchingData(false);
+    //   setError(err.message);
+    // });
+    fetchNisssions()
+      .then(res => {
+        setIsFetchingData(false);
+        setMissions(res.data);
+      })
+      .catch(err => {
+        setIsFetchingData(false);
+        setError(err.message);
+      });
   };
   return (
     <div className="App">
